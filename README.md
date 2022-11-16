@@ -19,9 +19,13 @@ modify the resume_state in config/config.conf
 python fakeimg.py -bg [backgroundimgpath] -cp [crackimgpath]
 ```
 
+
 ## More Samples
 [More generated crack images(g4jg)](https://pan.baidu.com/s/17iiV2_PzxJae4nwbSjHBhw)
 ![](https://github.com/SEU-zhc/CDM/blob/main/samples/a.png)
 ![](https://github.com/SEU-zhc/CDM/blob/main/samples/b.png)
 ![](https://github.com/SEU-zhc/CDM/blob/main/samples/c.png)
 ![](https://github.com/SEU-zhc/CDM/blob/main/samples/d.png)
+
+## Training report
+Statistical data in training stage are recorded by [wandb](https://wandb.ai/seu_zhc/generate-crack/reports/CDM-training-report--VmlldzoyOTc4NzMw?accessToken=tflfroo4wy9ke894jx0icd1nd9ujd71n1zjdgbf1h7hvn4lyqh6lgyhzen2xeedu)
