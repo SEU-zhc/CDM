@@ -1,0 +1,91 @@
+{
+  "name": "validation",
+  "phase": "test",
+  "gpu_ids": [
+    0
+  ],
+  "path": {
+    "log": "logs",
+    "tb_logger": "tb_logger",
+    "results": "results",
+    "checkpoint": "checkpoint",
+    "resume_state": "/root/autodl-tmp/assets/I830000_E1259"
+    //        "resume_state": null
+  },
+  "datasets": {
+    "test": {
+      "name": "testDataset",
+      "resolution": 512
+    }
+  },
+  "model": {
+    "which_model_G": "CDM",
+    "finetune_norm": false,
+    "unet": {
+      "in_channel": 9,
+      "out_channel": 3,
+      "inner_channel": 64,
+      "norm_groups": 16,
+      "channel_multiplier": [
+        1,
+        2,
+        4,
+        8,
+        // 8,
+        // 16,
+        16
+      ],
+      "attn_res": [
+        // 16
+      ],
+      "res_blocks": 1,
+      "dropout": 0
+    },
+    "beta_schedule": {
+      // use munual beta_schedule for acceleration
+      "train": {
+        "schedule": "linear",
+        "n_timestep": 2000,
+        "linear_start": 1e-6,
+        "linear_end": 1e-2
+      },
+      "val": {
+        "schedule": "linear",
+        "n_timestep": 2000,
+        //T in paper
+        "linear_start": 1e-6,
+        "linear_end": 1e-2
+      },
+      "test": {
+        "schedule": "linear",
+        "n_timestep": 2000,
+        //T in paper
+        "linear_start": 1e-6,
+        "linear_end": 1e-2
+      }
+    },
+    "diffusion": {
+      "image_size": 512,
+      "channels": 3,
+      "conditional": true
+    }
+  },
+  "train": {
+    "n_iter": 1000000,
+    "val_freq": 20000,
+    "save_checkpoint_freq": 100000,
+    "print_freq": 100,
+    "optimizer": {
+      "type": "adam",
+      "lr": 1e-6
+    },
+    "ema_scheduler": {
+    }
+  },
+  //wandb config
+  "wandb": {
+    "project": "generate-crack-1024-a100",
+    "entity": "seu_zhc"
+  }
+}
+
