@@ -1,5 +1,6 @@
 # CDM-Crack conditional generative model
 Implementation of paper - CDM: Controllable Complex Pavement Crack Conditional Generative Model
+![](https://github.com/SEU-zhc/CDM/blob/main/samples/show.png)
 
 ## Web Demo
 We deployed our model online.
@@ -19,4 +20,8 @@ python fakeimg.py -bg [backgroundimgpath] -cp [crackimgpath]
 ```
 
 ## More Samples
-
+[More generated crack images(g4jg)](https://pan.baidu.com/s/17iiV2_PzxJae4nwbSjHBhw)
+![](https://github.com/SEU-zhc/CDM/blob/main/samples/a.png)
+![](https://github.com/SEU-zhc/CDM/blob/main/samples/b.png)
+![](https://github.com/SEU-zhc/CDM/blob/main/samples/c.png)
+![](https://github.com/SEU-zhc/CDM/blob/main/samples/d.png)
