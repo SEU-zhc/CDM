@@ -4,7 +4,7 @@ Implementation of paper - CDM: Controllable Complex Pavement Crack Conditional G
 
 ## Web Demo
 We deployed our model online.
-You can generate any crack images using a background image and a crack mask image in [web demo](http://seuzhc.asuscomm.com:44455/). (If encountering unknown errors, please use a mobile device to access.)
+You can generate any crack images using a background image and a crack mask image in [web demo](http://seuzhc.asuscomm.com:44455/). (If encountering unknown errors, please use a mobile device to access.http://seuzhc.asuscomm.com:44455/)
 
 ## Installation
 ```
